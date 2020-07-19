@@ -23,7 +23,7 @@ class ElephantAdapter : RecyclerView.Adapter<ElephantAdapter.ElephantViewHolder>
                 .load(item.image_url)
                 .into(item_elephant_image)
             item_elephant_name.text = item.name
-            item_elephant_dob.text = item.dob
+            item_elephant_dob.text = "D.O.B ${item.dob}"
 
             setOnClickListener {
 

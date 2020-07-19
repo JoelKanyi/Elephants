@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:foreground="?attr/selectableItemBackground"
-        app:cardBackgroundColor="@color/background800"
+        app:cardBackgroundColor="#1640d3"
         app:cardCornerRadius="8dp"
         app:cardElevation="6dp">
 
@@ -29,8 +29,9 @@
                 android:id="@+id/item_elephant_image"
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
-                android:scaleType="center"
+                android:scaleType="fitXY"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:src="@drawable/ic_launcher_background" />
