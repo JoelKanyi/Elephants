@@ -27,12 +27,10 @@ class ElephantAdapter : RecyclerView.Adapter<ElephantAdapter.ElephantViewHolder>
 
             setOnClickListener {
 
-                    //DetailActivity.startActivity(context, item_poster_circle_transformationLayout, item)
-                //previousTime = now
             }
         }
     }
-    fun addPosterList(list: List<Elephant>) {
+    fun addElephantList(list: List<Elephant>) {
         items.clear()
         items.addAll(list)
         notifyDataSetChanged()
