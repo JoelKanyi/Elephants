@@ -10,8 +10,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        recyclerView.adapter = ElephantAdapter().apply { addPosterList(getMockPosters()) }
-        //recyclerView_menu.adapter = PosterMenuAdapter().apply { addPosterList(getMockPosters()) }
-
+        recyclerView.adapter = ElephantAdapter().apply { addElephantList(getMockPosters()) }
     }
 }
