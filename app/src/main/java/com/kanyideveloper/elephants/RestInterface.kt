@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface RestInterface {
 
-    @GET("random")
+    @GET("elephants/")
     fun getElephants(): Call<List<Elephant>>
 }

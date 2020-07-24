@@ -20,7 +20,7 @@ class ElephantAdapter : RecyclerView.Adapter<ElephantAdapter.ElephantViewHolder>
         val item = items[position]
         holder.itemView.run {
             Glide.with(context)
-                .load(item.image_url)
+                .load(item.image)
                 .into(item_elephant_image)
             item_elephant_name.text = item.name
             item_elephant_dob.text = "D.O.B ${item.dob}"
@@ -31,7 +31,7 @@ class ElephantAdapter : RecyclerView.Adapter<ElephantAdapter.ElephantViewHolder>
         }
     }
     fun addElephantList(list: List<Elephant>) {
-        items.clear()
+        //items.clear()
         items.addAll(list)
         notifyDataSetChanged()
     }

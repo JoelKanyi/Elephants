@@ -4,7 +4,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RestClient{
-    private  val BASE_URL = ""
+    private  val BASE_URL = "https://elephant-api.herokuapp.com"
     private var mRetrofit: Retrofit? = null
 
     val client: Retrofit
