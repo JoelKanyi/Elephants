@@ -28,8 +28,9 @@
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/eleph_image"
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
+                        android:layout_width="115dp"
+                        app:shapeAppearanceOverlay="@style/CircleImageStyle"
+                        android:layout_height="115dp"
                         android:layout_below="@id/toolbar"
                         android:src="@mipmap/ic_launcher_round"
                         android:layout_centerHorizontal="true"/>
@@ -149,25 +150,89 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:behavior_overlapTop="32dp"
+        android:background="#8886e1"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
+            android:background="#8886e1"
             android:layout_height="match_parent">
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sex_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="#1640d3"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Sex:" />
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sex_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/sex_title"
+                app:layout_constraintTop_toBottomOf="@+id/sex_title"
+                tools:text="Male" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/affiliation_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="#1640d3"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/sex_value"
+                app:layout_constraintTop_toBottomOf="@+id/sex_value"
+                tools:text="Affiliation:" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/affiliation_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/affiliation_title"
+                app:layout_constraintTop_toBottomOf="@+id/affiliation_title"
+                tools:text="True" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/description_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="#1640d3"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/affiliation_value"
+                app:layout_constraintTop_toBottomOf="@+id/affiliation_value"
+                tools:text="Description:" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/description_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/description_title"
+                app:layout_constraintTop_toBottomOf="@+id/description_title"
+                tools:text="android:layout_width=android:layout_height=wrap_contentndroid:id=@+id/descr_linearandroid:layout_centerHorizontal=trueandroid:layout_below=@id/eleph_nameandroid:orientation=horizontal" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
-    val name: String,
-    val dob: String,
-    val species: String,
-    val sex: String,
-    val image: String,
-    val affiliation: String,
-    val fictional: String,
-    val dod: String,
-    val description: String
