@@ -6,143 +6,42 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
-        android:layout_height="350dp"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
-            app:toolbarId="@+id/toolbar">
+            android:background="@color/background"
+            app:contentScrim="@color/colorPrimary"
+            app:expandedTitleGravity="top|left"
+            app:expandedTitleTextAppearance="@style/CollapsedExpandedTitleText"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <RelativeLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:id="@+id/relative_layout"
-                android:layout_height="wrap_content">
-                <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/toolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"/>
+                android:layout_height="match_parent"
+                android:background="@color/background">
 
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/eleph_image"
-                        android:layout_width="115dp"
-                        app:shapeAppearanceOverlay="@style/CircleImageStyle"
-                        android:layout_height="115dp"
-                        android:layout_below="@id/toolbar"
-                        android:src="@mipmap/ic_launcher_round"
-                        android:layout_centerHorizontal="true"/>
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:maxLines="1"
-                    android:id="@+id/eleph_name"
-                    android:padding="8dp"
-                    android:layout_below="@id/eleph_image"
-                    android:layout_centerHorizontal="true"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:text="Balarama"/>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/eleph_image"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintDimensionRatio="1:1.2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/eleph_name">
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/dob_value"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:maxLines="1"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                        android:textColor="@color/white"
-                        android:textSize="22sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toStartOf="@+id/species_value"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:text="1960" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/species_value"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:maxLines="1"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                        android:textColor="@color/white"
-                        android:textSize="22sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toStartOf="@+id/fictional_value"
-                        app:layout_constraintStart_toEndOf="@+id/dob_value"
-                        app:layout_constraintTop_toTopOf="@+id/dob_value"
-                        tools:text="Mamalia" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/fictional_value"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:maxLines="1"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                        android:textColor="@color/white"
-                        android:textSize="22sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/species_value"
-                        app:layout_constraintTop_toTopOf="@+id/species_value"
-                        tools:text="True" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/dob_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:maxLines="1"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        app:layout_constraintEnd_toEndOf="@+id/species_value"
-                        app:layout_constraintStart_toStartOf="@+id/species_value"
-                        app:layout_constraintTop_toBottomOf="@+id/species_value"
-                        tools:text="Date of Birth" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/species_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:maxLines="1"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        app:layout_constraintEnd_toEndOf="@+id/dob_value"
-                        app:layout_constraintStart_toStartOf="@+id/dob_value"
-                        app:layout_constraintTop_toBottomOf="@+id/dob_value"
-                        tools:text="Species" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/fictional_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:maxLines="1"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        app:layout_constraintEnd_toEndOf="@+id/fictional_value"
-                        app:layout_constraintStart_toStartOf="@+id/fictional_value"
-                        app:layout_constraintTop_toBottomOf="@+id/fictional_value"
-                        tools:text="Fictional" />
-
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            </RelativeLayout>
-
-
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/detail_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -150,26 +49,126 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:behavior_overlapTop="32dp"
-        android:background="#8886e1"
+        android:background="@color/background"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:background="#8886e1"
+            android:background="@color/background"
             android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/eleph_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="Balarama"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dob_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/species_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eleph_name"
+                tools:text="1960" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/species_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/fictional_value"
+                app:layout_constraintStart_toEndOf="@+id/dob_value"
+                app:layout_constraintTop_toTopOf="@+id/dob_value"
+                tools:text="Mamalia" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fictional_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/species_value"
+                app:layout_constraintTop_toTopOf="@+id/species_value"
+                tools:text="True" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/species_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/species_value"
+                app:layout_constraintStart_toStartOf="@+id/species_value"
+                app:layout_constraintTop_toBottomOf="@+id/species_value"
+                tools:text="Species" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dob_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/dob_value"
+                app:layout_constraintStart_toStartOf="@+id/dob_value"
+                app:layout_constraintTop_toBottomOf="@+id/dob_value"
+                tools:text="Date of Birth" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fictional_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/fictional_value"
+                app:layout_constraintStart_toStartOf="@+id/fictional_value"
+                app:layout_constraintTop_toBottomOf="@+id/fictional_value"
+                tools:text="Fictional" />
+
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/sex_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="8dp"
                 android:maxLines="1"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                 android:textColor="#1640d3"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fictional_title"
                 tools:text="Sex:" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -208,30 +207,6 @@
                 app:layout_constraintStart_toStartOf="@id/affiliation_title"
                 app:layout_constraintTop_toBottomOf="@+id/affiliation_title"
                 tools:text="True" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/description_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:maxLines="1"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                android:textColor="#1640d3"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="@id/affiliation_value"
-                app:layout_constraintTop_toBottomOf="@+id/affiliation_value"
-                tools:text="Description:" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/description_value"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="@id/description_title"
-                app:layout_constraintTop_toBottomOf="@+id/description_title"
-                tools:text="android:layout_width=android:layout_height=wrap_contentndroid:id=@+id/descr_linearandroid:layout_centerHorizontal=trueandroid:layout_below=@id/eleph_nameandroid:orientation=horizontal" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

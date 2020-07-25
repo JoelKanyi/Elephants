@@ -2,7 +2,6 @@ package com.kanyideveloper.elephants
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.skydoves.transformationlayout.TransformationAppCompatActivity
@@ -25,7 +24,14 @@ class ElephantDetails : TransformationAppCompatActivity() {
             fictional_value.text = it.fictional
             sex_value.text = it.sex
             affiliation_value.text = it.affiliation
-            description_value.text = it.description
+
+            //description_value.text = it.description
+
+            species_title.text = "Species:"
+            dob_title.text = "Date of Birth:"
+            affiliation_title.text = "Affiliation:"
+            sex_title.text = "Sex:"
+            fictional_title.text = "Fictional:"
         }
     }
 

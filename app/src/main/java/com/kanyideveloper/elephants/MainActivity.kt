@@ -13,8 +13,6 @@ import retrofit2.Response
 class MainActivity : AppCompatActivity() {
 
     private val TAG = "MainActivity"
-    var progressBar: ProgressBar = findViewById(R.id.my_progressbar)
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -44,12 +42,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showDialog() {
-        progressBar.visibility = View.VISIBLE
+        my_progressbar.visibility = View.VISIBLE
     }
 
     private fun hideDialog() {
-        if (progressBar.visibility === View.VISIBLE) {
-            progressBar.visibility = View.INVISIBLE
+        if (my_progressbar.visibility === View.VISIBLE) {
+            my_progressbar.visibility = View.INVISIBLE
         }
     }
 
