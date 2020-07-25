@@ -1,39 +1,56 @@
 package com.kanyideveloper.elephants
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.ProgressBar
 import android.widget.Toast
-import com.kanyideveloper.elephants.MockUtil.getMockPosters
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Response
-import javax.security.auth.callback.Callback
 
 class MainActivity : AppCompatActivity() {
 
     private val TAG = "MainActivity"
+    var progressBar: ProgressBar = findViewById(R.id.my_progressbar)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+        showDialog()
         val apiService : RestInterface= RestClient.client.create(RestInterface::class.java)
         val call = apiService.getElephants()
 
         call.enqueue(object : retrofit2.Callback<List<Elephant>> {
             override fun onFailure(call: Call<List<Elephant>>, t: Throwable) {
                 Toast.makeText(applicationContext,"Error on fetching the data",Toast.LENGTH_SHORT).show()
+                hideDialog()
             }
 
             override fun onResponse(
                 call: Call<List<Elephant>>,
                 response: Response<List<Elephant>>
-            ) {
-                recyclerView.adapter = ElephantAdapter().apply { addElephantList(response.body()!!) }
+            )
+            {
+                hideDialog()
                 Log.d(TAG,"${response.body()}")
+                recyclerView.adapter = ElephantAdapter().apply { addElephantList(response.body()!!) }
             }
         })
 
     }
+
+    private fun showDialog() {
+        progressBar.visibility = View.VISIBLE
+    }
+
+    private fun hideDialog() {
+        if (progressBar.visibility === View.VISIBLE) {
+            progressBar.visibility = View.INVISIBLE
+        }
+    }
+
 }
