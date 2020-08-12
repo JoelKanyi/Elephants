@@ -1,9 +1,8 @@
 # Elephants
 
-An android application to save short notes, built with clean architecture principles, Repository Pattern and MVVM
-pattern as well as Architecture Components.
+An android application.... 
 
-Min Api Level : 19 
+Min Api Level :... 
 
 Build System : [Gradle](https://gradle.org/)
 
@@ -34,16 +33,10 @@ In order to get the app running yourself, you need to:
 ## Libraries
 
 Libraries used in the whole application are:
-
-- [Jetpack](https://developer.android.com/jetpack)🚀
-- [Viewmodel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Manage UI related data in a lifecycle conscious way 
-  and act as a channel between use cases and ui
-- [Room](https://developer.android.com/training/data-storage/room) - Provides abstraction layer over SQLite
 - [Material Design](https://material.io/develop/android/docs/getting-started/) - build awesome beautiful UIs.🔥🔥
-- [RecyclerView Swipe Decorator](https://github.com/wasabeef/recyclerview-animators) - Swipe to delete animator
 
 ## Pattern
-<img src="screenshots/mvvm2.png"/>
+
 
 ## Demo
 
