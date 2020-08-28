@@ -39,7 +39,7 @@ class ElephantAdapter : RecyclerView.Adapter<ElephantAdapter.ElephantViewHolder>
         }
     }
     fun addElephantList(list: List<Elephant>) {
-        //items.clear()
+        items.clear()
         items.addAll(list)
         notifyDataSetChanged()
     }

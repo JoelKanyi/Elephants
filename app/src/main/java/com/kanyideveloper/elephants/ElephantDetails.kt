@@ -25,7 +25,6 @@ class ElephantDetails : TransformationAppCompatActivity() {
             sex_value.text = it.sex
             affiliation_value.text = it.affiliation
 
-            //description_value.text = it.description
 
             species_title.text = "Species:"
             dob_title.text = "Date of Birth:"

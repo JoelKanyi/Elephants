@@ -13,5 +13,5 @@ data class Elephant(
     val affiliation: String,
     val fictional: String,
     val dod: String
-    //val description: String
+
 ) : Parcelable
