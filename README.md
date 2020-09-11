@@ -1,19 +1,5 @@
 # Elephants
 
-An android application.... 
-
-Min Api Level :... 
-
-Build System : [Gradle](https://gradle.org/)
-
-## Table of Contents
-
-- [Libraries](#libraries)
-- [Contributors](#contributors)
-- [Demo](#demo)
-- [Support](#support)
-- [References](#references)
-
 
 ## Setup Requirements
 
@@ -34,25 +20,18 @@ In order to get the app running yourself, you need to:
 
 Libraries used in the whole application are:
 - [Material Design](https://material.io/develop/android/docs/getting-started/) - build awesome beautiful UIs.🔥🔥
+- Transformation layout
+- Retrofit
 
-## Pattern
-
+## API Endpoint
+- https://elephant-api.herokuapp.com/elephants/
 
 ## Demo
 
 <p float="left">
-<img src="screenshots/Screenshot_20200809-151201.jpg" width=250/>
-<img src="screenshots/Screenshot_20200809-151215.jpg" width=250/>
-  <img src="screenshots/Screenshot_20200809-151429.jpg" width=250/>
-  <img src="screenshots/Screenshot_20200809-151445.jpg" width=250/>
-  <img src="screenshots/Screenshot_20200809-151457.jpg" width=250/>
-  <img src="screenshots/Screenshot_20200809-151504.jpg" width=250/>
-  <img src="screenshots/Screenshot_20200809-151510.jpg" width=250/>
+<img src="screenshot/Screenshot_20200911-142211.jpg" width=250/>
+<img src="screenshot/Screenshot_20200911-142219.jpg" width=250/>
   </p>
-
-## Contributors
-
-- Thanks to [Coding in Flow](https://codinginflow.com/) for amazing tutorial on the MVVM and android architectural components
 
 ## Support
 
@@ -67,25 +46,3 @@ Please feel free to contact me if you have any questions, ideas or even if you j
 - [Github](https://github.com/JoelKanyi)
 - [Facebook](https://www.facebook.com/joel.kanyi.71)
 - [LinkedIn](https://www.linkedin.com/in/joel-kanyi-037270174/) 
-
-## References
-
-- https://material.io/develop/android/components/navigation-view/
-- https://codinginflow.com/
-
-## License
-
- ```
-   Copyright 2019 Joel Kanyi
-   
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
