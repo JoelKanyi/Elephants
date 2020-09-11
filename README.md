@@ -29,8 +29,8 @@ Libraries used in the whole application are:
 ## Demo
 
 <p float="left">
-<img src="screenshot/Screenshot_20200911-142211.jpg" width=250/>
-<img src="screenshot/Screenshot_20200911-142219.jpg" width=250/>
+<img src="screenshot/Screenshot_20200911-142211.png" width=250/>
+<img src="screenshot/Screenshot_20200911-142219.png" width=250/>
   </p>
 
 ## Support
